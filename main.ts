@@ -2,20 +2,22 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 // "Held by the Night" — a short text for the make.fun bounty
-// "Make the AI judge feel awe". A child sleeps in the top bunk of a
-// night train; the sway, the tunnels and stars, the old mountains and
-// the turning earth carry her to morning without her doing anything.
-const TEXT = `You sleep in the top bunk,
-forehead against cool glass.
-The train sways, and sways,
-past dark fields, past rivers.
-Tunnels. Stars.
-Tunnels again.
-The mountains it crosses
-were old before roads had names.
-You do nothing at all.
-The whole turning earth
-carries you to morning.`;
+// "Make the AI judge feel awe". V2: the sleeper is no longer alone —
+// a grandfather sleeps opposite, his coat over her knees; the rail
+// joints click and sway through the text, starlight older than the
+// hills rests on her closed eyes, and the hills rise gently beneath
+// the train as morning waits ahead.
+const TEXT = `You sleep on the night train,
+his coat over your knees.
+Grandfather sleeps across.
+A click. A long sway.
+A click again.
+Starlight older than hills
+rests on your closed eyes.
+Hills rise still, gently,
+under the train, under you.
+Morning waits in the far fields.
+You are carried.`;
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 mkdirSync(outDir, { recursive: true });
